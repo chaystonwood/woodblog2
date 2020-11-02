@@ -1,32 +1,109 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="menu">
+      <div id="brand">
+        <router-link to="/">
+          <img src="/images/logo.png">
+        </router-link>
+      </div>
+      <div id="links">
+        <router-link to="/recent-posts">
+          <div class="menu-item">
+            <p>Recent Posts</p>
+          </div>
+        </router-link>
+        <router-link to="/search">
+          <div class="menu-item">
+            <p>Search</p>
+          </div>
+        </router-link>
+        <router-link to="/about">
+          <div class="menu-item">
+            <p>About</p>
+          </div>
+        </router-link>
+      </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-1 {
+  border-radius: 10px;
+  border: 2px solid #75BEFF;
   text-align: center;
-  color: #2c3e50;
+  padding: 1em;
+  max-width: 15em;
+  margin: 1em auto 1em auto;
 }
 
-#nav {
-  padding: 30px;
+.header-2 {
+  color: #75BEFF;
+  margin-top: 3em;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.header-2-centered {
+  color: #75BEFF;
+  margin-top: 3em;
+  text-align: center;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+ul {
+  padding-left: 2em;
+}
+
+li {
+  padding-top: 0.5em;
+}
+
+.mission-statement {
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 20px;
+  text-align: center;
+  padding: 0em 3em 3em 3em;
+}
+
+#menu {
+  background-color: #75BEFF;
+  display: flex;
+}
+
+#menu a {
+  color: #D3D3D3;
+}
+
+#menu a:hover {
+  color: white;
+}
+
+#brand {
+}
+
+#brand img {
+  height: 60px;
+  margin: 10px;
+}
+
+#links {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.menu-item {
+  display: flex;
+  margin: 10px;
+}
+
+.menu-item p {
+  margin: 0px;
 }
 </style>
